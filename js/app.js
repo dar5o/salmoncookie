@@ -1,13 +1,13 @@
 'use strict';
-//Data ==========================================
-var operationHour = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
+//Data
+var operationHour = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 
 var allcookieshops = [];
 //Get cookie sold to table 
 var cookieshopTable = document.getElementById('cookies-sold');
 //Get to add shop to form
 var cookieShopForm = document.getElementById('add-shop-form');
-//funmctionally ==================================
+//funmctionally
 //Constructor for store sales data
 function CookieShop(location, minCust, maxCust, cookiesPerSale) {
   this.location = location;
@@ -102,43 +102,17 @@ function totalCookiesPerHour() { // Bottom Totals
   cookieshopTable.appendChild(trElement);
 }
 //Calls function to generate arrays with random number of cookies
-new CookieShop('First and Pike', 23, 65, 6.3);
-new CookieShop('SeaTac', 3, 24, 1.2);
-new CookieShop('Seattle Center', 11, 38, 3.7);
-new CookieShop('Capitol Hill', 20, 38, 2.3);
-new CookieShop('Alki', 2, 16, 4.6);
+new CookieShop('Seattle', 23, 65, 6.3);
+new CookieShop('Tokyo', 3, 24, 1.2);
+new CookieShop('Dubai', 11, 38, 3.7);
+new CookieShop('Paris', 20, 38, 2.3);
+new CookieShop('Lima', 2, 16, 4.6);
 
 function renderallcookieshops() {
   for(var i in allcookieshops) {
     allcookieshops[i].render();
   }
 }
-// code to add new shop 
-function addNewCookieShop(event) {
-  event.preventDefault();
-  console.log(event);
-  console.log(event.target);
-  console.log(event.target.shopLocation);
-  console.log
-  // Get target of event 
-  (event.target.shopLocation.value);
-  var newLoc = 
-  //The parseInt() function parses a string and returns an integer.
-  event.target.shopLocation.value;
-  var newMinCust = parseInt(event.target.minCust.value);
-  var newMaxCust = parseInt(event.target.maxCust.value);
-  var newCookiesPerSale = parseInt(event.target.cookiesPerSale.value);
-// New Keyword to call to function creates a new object
-  new CookieShop(newLoc, newMinCust, newMaxCust, newCookiesPerSale);
-
-// Access & Update text with TextContent to Table 
-  cookieshopTable.innerHTML = '';
-  makeHeaderRow();
-  renderallcookieshops();
-  totalCookiesPerHour();
-}
-//Event Listener to Form
-cookieShopForm.addEventListener('submit', addNewCookieShop);
 
 makeHeaderRow();
 renderallcookieshops();

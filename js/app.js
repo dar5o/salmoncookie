@@ -6,9 +6,8 @@ var allcookieshops = [];
 //Get cookie sold to table 
 var cookieshopTable = document.getElementById('cookies-sold');
 //Get to add shop to form
-var cookieShopForm = document.getElementById('add-shop-form');
+//var cookieShopForm = document.getElementById('add-shop-form');
 //funmctionally
-//Constructor for store sales data
 function CookieShop(location, minCust, maxCust, cookiesPerSale) {
   this.location = location;
   this.minCust = minCust;

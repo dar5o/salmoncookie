@@ -6,7 +6,7 @@ var allcookieshops = [];
 //Get cookie sold to table 
 var cookieshopTable = document.getElementById('cookies-sold');
 //Get to add shop to form
-//var cookieShopForm = document.getElementById('add-shop-form');
+var cookieShopForm = document.getElementById('add-shop-form');
 //funmctionally
 function CookieShop(location, minCust, maxCust, cookiesPerSale) {
   this.location = location;
@@ -111,6 +111,30 @@ function renderallcookieshops() {
     allcookieshops[i].render();
   }
 }
+// add new shop 
+function addNewCookieShop(event) {
+  event.preventDefault();
+  console.log(event);
+  console.log(event.target);
+  console.log(event.target.shopLocation);
+
+  (event.target.shopLocation.value);
+  var newLoc = 
+
+  event.target.shopLocation.value;
+  var newMinCust = parseInt(event.target.minCust.value);
+  var newMaxCust = parseInt(event.target.maxCust.value);
+  var newCookiesPerSale = parseInt(event.target.cookiesPerSale.value);
+
+  new CookieShop(newLoc, newMinCust, newMaxCust, newCookiesPerSale);
+
+  cookieshopTable.innerHTML = '';
+  makeHeaderRow();
+  renderallcookieshops();
+  totalCookiesPerHour();
+}
+//Event Listener to Form
+cookieShopForm.addEventListener('submit', addNewCookieShop);
 
 makeHeaderRow();
 renderallcookieshops();

@@ -1,0 +1,250 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
+h1, h2, h3, h4, p {
+  color: white;
+  font-family: 'Oswald', sans-serif;
+}
+h1 {
+  font-family: 'Lobster', cursive;
+  font-size: 5em;
+  font-weight: 900;
+}
+h2 {
+  font-size: 2.5em;
+  font-weight: 700;
+}
+h3 {
+  font-size: 2.125em;
+  font-weight: 500;
+}
+h4 {
+  font-size: 1.5em;
+  font-weight: 400;
+}
+p {
+  font-size: 1em;
+  font-weight: 400;
+}
+em {
+  text-decoration: none;
+  font-size: 1em;
+  font-style: italic;
+}
+div {
+  display: block;
+}
+/* Header */
+header.home {
+  background-attachment: fixed;
+  background-image: url(https://images.unsplash.com/photo-1470645792662-dd18394f8c97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0px -13px 35px 14px #666;
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+  width: 200vmax;
+}
+header.home::before {
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  bottom:0;
+  right: 0;
+  left: 0;
+  width: 100%;
+}
+header.top-head {
+  background: black;
+  box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 0.2);
+  position:fixed;
+  top:0;
+  left:0;
+  width:100vw;
+  z-index: 5;
+}
+/* Section */
+section.full-width {
+  position: relative;
+  height:150vh;
+  width:100vw;
+  text-align:center;
+  box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 0.2);
+  overflow: auto;
+}
+/* Nav */
+nav.fixed-side {
+  position: fixed;
+  top: 90vh;
+  right: 0;
+  z-index:10;
+  margin-right: 15px;
+}
+nav.fixed-side li {
+  list-style-type: none;
+  margin: 40px;
+}
+nav.fixed-side a {
+  color: white;  
+}
+nav.fixed-side a:active {
+  color: gray;
+}
+nav.top {
+  text-align: left;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+  margin-right: 5px;
+  margin-top: 15px;
+  position: relative;
+  font-family: oswald;
+  font-size: 2.25em;
+  width: 98vw;
+  height: 50px;
+}
+nav.top a {
+  color: white;
+  text-decoration: none;
+  padding-left:5px;
+}
+nav.top li {
+  vertical-align: bottom;
+  display: inline;
+  position: relative;
+  transition: all ease .3s;
+}
+nav.top li:hover {
+  background: darkslategray;
+}
+nav.top li::before {
+  content: "";
+  position: absolute;
+  top:4px;
+  left:0;
+  bottom:0;
+  border-left: solid 1px white;
+  height: 80%;
+}
+/* Logo */
+div.fp-logo-container {
+  position: absolute;
+  left: 0;
+  width: 50vw;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+div.fp-logo-container {
+  bottom:0;  
+}
+img.fp-logo {
+  width:200px;
+  vertical-align: middle;
+  transition: all ease-in-out 3s;
+}
+img.fp-logo:hover {
+  transform: rotate(1080deg);
+}
+div.top-logo-container {
+  display: inline-block;
+  padding: .75em;
+}
+div.top-logo-container img {
+  width:60px;
+  vertical-align: middle;
+}
+/* Text Style */
+div.fp-text-container, div.top-text-container {
+  display:inline-block;
+  vertical-align: middle;
+}
+div.fp-text-container h1 {
+  font-size: 5em;
+  border-bottom: solid 2px white;
+}
+div.fp-text-container h2 {
+  font-size: 1.5em;
+}
+div.top-text-container h1{
+  font-size: 2em;
+  border-bottom: solid 2px white;
+}
+div.top-text-container h2 {
+  font-size: .75em;
+}
+/* Background of section */
+#locations {
+  background: darkgray;
+  height: 1200px;
+}
+#about {
+  background: rgb(175, 0, 0);
+  height: 900px;
+}
+#sales {
+  background: black;
+  height: 250px;
+}
+/* Section 2 */
+section.full-width h3 {
+  text-align: center;
+  padding: 5px;
+  border-bottom: solid 1px white;
+  width: 25%;
+  margin: auto;
+}
+section.full-width p {
+  margin: 20px 25%;
+  line-height: 1.5em;  
+}
+/* Locaton */
+div.location-entry {
+  text-align: center;
+  display: inline-block;
+  margin: 12px;
+}
+div.location-entry img {
+  width: 400px;  
+  border: solid 10px #fbf9ee; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 3px;
+}
+div.location-entry a {
+  font-size: 2em;
+  color: white;
+  margin: 3px;
+}
+div.location-entry a:hover {
+  color: #5a4646;
+}
+div.location-entry h4 {
+  padding-top: 10px;
+  margin-bottom: 8px;
+}
+div.location-entry p {
+  margin: 8px;
+  line-height: inherit;
+}
+div.social-icons {
+  padding: 5px;
+}
+div.text-container {
+  margin-top: 15px;
+  position: absolute;
+  top: 45%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+}
+#sales a {
+  color: salmon;
+  margin: auto;
+}
+section.sticky-nav {
+  padding-top:100px;
+}
+
+/* Form */

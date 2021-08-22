@@ -1,0 +1,134 @@
+body {
+	text-align: center;
+}
+/* Section */
+section.full-width {
+  position: relative;
+  height:150vh;
+  width:100vw;
+  text-align:center;
+  box-shadow: 1px 1px 20px 5px rgba(0, 0, 0, 0.2);
+  overflow: auto;
+}
+/* Nav */
+nav.fixed-side {
+  position: fixed;
+  top: 40vh;
+  right: 0;
+  z-index:10;
+  margin-right: 15px;
+}
+nav.fixed-side li {
+  list-style-type: none;
+  margin: 20px;
+}
+nav.fixed-side a {
+  color: white;  
+}
+nav.fixed-side a:active {
+  color: gray;
+}
+nav.top {
+  background: black;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  position: relative;
+  font-family: oswald;
+  font-size: 1.25em;
+  width: 98vw;
+  height: 30px;
+}
+nav.top a {
+  color: white;
+  text-decoration: none;
+  padding-left:5px;
+}
+nav.top li {
+  display: inline;
+  position: relative;
+  transition: all ease .3s;
+}
+nav.top li:hover {
+  background: darkgrey;
+}
+nav.top li::before {
+  content: "";
+  position: absolute;
+  top:4px;
+  left:0;
+  bottom:0;
+  border-left: solid 1px white;
+  height: 80%;
+}
+/* Logo */
+div.fp-logo-container {
+  position: absolute;
+  left: 0;
+  width: 50vw;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+div.fp-logo-container {
+  bottom:0;  
+}
+img.fp-logo {
+  width:200px;
+  vertical-align: middle;
+  transition: all ease-in-out 3s;
+}
+img.fp-logo:hover {
+  transform: rotate(1080deg);
+}
+div.top-logo-container {
+  display: inline-block;
+  padding: .75em;
+}
+div.top-logo-container img {
+  width:60px;
+  vertical-align: middle;
+}
+/* Text Style */
+div.fp-text-container, div.top-text-container {
+  display:inline-block;
+  vertical-align: middle;
+}
+div.fp-text-container h1 {
+  font-size: 5em;
+  border-bottom: solid 2px white;
+}
+div.fp-text-container h2 {
+  font-size: 1.5em;
+}
+div.top-text-container h1{
+  font-size: 2em;
+  border-bottom: solid 2px white;
+}
+div.top-text-container h2 {
+  font-size: .75em;
+}
+/* Background of section */
+#locations {
+  background: darkgray;
+  height: 1300px;
+}
+.family {
+	margin-top: 225px;
+	align: center;
+}
+.family img{
+	border-radius: 20%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	background-position: center;
+}
+
+div.text-container {
+  margin-top: 125px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+}
